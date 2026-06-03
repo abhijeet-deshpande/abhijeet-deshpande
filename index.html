@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Abhijeet Deshpande | Platform & DevOps Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#000000;
+  --bg2:#0a0a0a;
+  --bg3:#111111;
+  --card:rgba(255,255,255,0.04);
+  --card-border:rgba(255,255,255,0.08);
+  --card-hover:rgba(255,255,255,0.07);
+  --text:#ffffff;
+  --text2:rgba(255,255,255,0.6);
+  --text3:rgba(255,255,255,0.35);
+  --grad:linear-gradient(135deg,#6366f1,#8b5cf6,#06b6d4);
+  --grad2:linear-gradient(135deg,#06b6d4,#6366f1);
+  --accent:#6366f1;
+  --accent2:#06b6d4;
+}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--card-border)}
+.nav-brand{font-size:1.1rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:0.85rem;color:var(--text2);text-decoration:none;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-toggle{display:none;background:none;border:1px solid var(--card-border);color:var(--text);padding:0.4rem 0.7rem;cursor:pointer;border-radius:6px;font-size:1rem}
+
+/* HERO */
+#home{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
+.hero-bg-glow{position:absolute;top:20%;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(99,102,241,0.12) 0%,transparent 70%);pointer-events:none}
+.hero-bg-glow2{position:absolute;bottom:10%;right:10%;width:300px;height:300px;background:radial-gradient(circle,rgba(6,182,212,0.08) 0%,transparent 70%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:800px}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);padding:0.4rem 1rem;border-radius:20px;font-size:0.78rem;color:rgba(255,255,255,0.8);margin-bottom:1.5rem;font-weight:500}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+.hero-name{font-size:clamp(2.5rem,8vw,5rem);font-weight:900;line-height:1;letter-spacing:-0.03em;margin-bottom:0.3rem}
+.hero-name .grad{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-title{font-size:clamp(1rem,2.5vw,1.4rem);color:var(--text2);font-weight:400;margin-bottom:1rem}
+.hero-title b{color:var(--text);font-weight:600}
+.hero-desc{font-size:1rem;color:var(--text2);max-width:560px;margin:0 auto 2rem;line-height:1.8}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.btn-grad{padding:0.75rem 2rem;background:var(--grad);border:none;border-radius:8px;color:#fff;font-size:0.88rem;font-weight:600;cursor:pointer;text-decoration:none;transition:opacity 0.2s,transform 0.2s}
+.btn-grad:hover{opacity:0.85;transform:translateY(-2px)}
+.btn-outline{padding:0.75rem 2rem;background:transparent;border:1px solid var(--card-border);border-radius:8px;color:var(--text);font-size:0.88rem;font-weight:500;cursor:pointer;text-decoration:none;transition:all 0.2s}
+.btn-outline:hover{border-color:rgba(99,102,241,0.5);background:rgba(99,102,241,0.08);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-n{font-size:1.8rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.stat-l{font-size:0.72rem;color:var(--text3);margin-top:0.2rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase}
+
+/* SECTION BASE */
+section{padding:5rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-top{text-align:center;margin-bottom:3.5rem}
+.section-eyebrow{display:inline-block;font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.6rem}
+.section-title{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.6rem}
+.section-sub{color:var(--text2);font-size:0.95rem;max-width:480px;margin:0 auto}
+
+/* ABOUT */
+#about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-text p{color:var(--text2);font-size:0.93rem;line-height:1.9;margin-bottom:1.1rem}
+.about-text p b{color:var(--text);font-weight:600}
+.about-cards{display:flex;flex-direction:column;gap:0.8rem}
+.about-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:1rem 1.2rem;display:flex;align-items:flex-start;gap:0.9rem;transition:background 0.2s,border-color 0.2s}
+.about-card:hover{background:var(--card-hover);border-color:rgba(99,102,241,0.25)}
+.about-card-icon{font-size:1.2rem;flex-shrink:0;margin-top:0.1rem}
+.about-card-key{font-size:0.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:0.15rem}
+.about-card-val{font-size:0.88rem;color:var(--text)}
+.about-card-val a{color:var(--accent2);text-decoration:none}
+.about-card-val a:hover{text-decoration:underline}
+
+/* SKILLS */
+#skills{}
+.skills-wrap{display:flex;flex-direction:column;gap:2.5rem}
+.skill-group-label{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--card-border)}
+.skill-badges{display:flex;flex-wrap:wrap;gap:0.6rem}
+.skill-badge{display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;background:var(--card);border:1px solid var(--card-border);border-radius:8px;font-size:0.8rem;color:var(--text2);font-weight:500;transition:all 0.2s;cursor:default}
+.skill-badge:hover{background:rgba(99,102,241,0.12);border-color:rgba(99,102,241,0.35);color:var(--text);transform:translateY(-2px)}
+.skill-badge.hot{background:rgba(99,102,241,0.1);border-color:rgba(99,102,241,0.3);color:#a5b4fc}
+
+/* TIMELINE */
+#journey{background:var(--bg2)}
+.tl-tabs{display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem}
+.tl-tab{padding:0.5rem 1.2rem;border:1px solid var(--card-border);border-radius:20px;background:transparent;color:var(--text2);font-size:0.8rem;font-weight:500;cursor:pointer;transition:all 0.2s}
+.tl-tab:hover,.tl-tab.active{background:var(--grad);border-color:transparent;color:#fff}
+.timeline{max-width:720px;margin:0 auto;position:relative}
+.timeline::before{content:'';position:absolute;left:18px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,#6366f1,#06b6d4,transparent)}
+.tl-item{padding:0 0 2.5rem 3.5rem;position:relative}
+.tl-item::before{content:'';position:absolute;left:12px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--grad);box-shadow:0 0 0 3px rgba(99,102,241,0.2)}
+.tl-period{font-size:0.72rem;font-weight:600;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:0.06em;margin-bottom:0.3rem}
+.tl-role{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:0.2rem}
+.tl-company{font-size:0.82rem;color:var(--text3);font-weight:500;margin-bottom:0.8rem}
+.tl-points{list-style:none}
+.tl-points li{font-size:0.85rem;color:var(--text2);padding:0.25rem 0;padding-left:1.1rem;position:relative;line-height:1.7}
+.tl-points li::before{content:'→';position:absolute;left:0;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-size:0.8rem}
+.tl-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.7rem}
+.tl-tag{font-size:0.7rem;padding:0.18rem 0.6rem;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.2);color:#a5b4fc;border-radius:4px;font-weight:500}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.2rem}
+.proj-card{background:var(--card);border:1px solid var(--card-border);border-radius:16px;padding:1.6rem;transition:all 0.3s;position:relative;overflow:hidden}
+.proj-card::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity 0.3s;z-index:0}
+.proj-card:hover{border-color:rgba(99,102,241,0.3);transform:translateY(-4px)}
+.proj-card:hover::before{opacity:0.04}
+.proj-card>*{position:relative;z-index:1}
+.proj-icon{font-size:2rem;margin-bottom:0.8rem}
+.proj-title{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.5rem}
+.proj-desc{font-size:0.83rem;color:var(--text2);line-height:1.7;margin-bottom:1rem}
+.proj-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1rem}
+.proj-tag{font-size:0.68rem;padding:0.18rem 0.6rem;background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2);color:#67e8f9;border-radius:4px}
+.proj-links{display:flex;gap:0.7rem}
+.proj-link{font-size:0.75rem;color:#a5b4fc;text-decoration:none;border:1px solid rgba(99,102,241,0.25);padding:0.3rem 0.8rem;border-radius:6px;transition:all 0.2s;font-weight:500}
+.proj-link:hover{background:rgba(99,102,241,0.15);border-color:rgba(99,102,241,0.5)}
+
+/* CERTS */
+#certifications{background:var(--bg2)}
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.cert-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:1.2rem 1.4rem;display:flex;align-items:flex-start;gap:1rem;transition:all 0.2s}
+.cert-card:hover{border-color:rgba(99,102,241,0.3);background:var(--card-hover);transform:translateY(-2px)}
+.cert-icon{font-size:1.6rem;flex-shrink:0}
+.cert-name{font-size:0.88rem;font-weight:600;color:var(--text);margin-bottom:0.2rem}
+.cert-issuer{font-size:0.72rem;color:var(--text3);font-weight:500;margin-bottom:0.4rem}
+.cert-pill{font-size:0.65rem;padding:0.18rem 0.6rem;border-radius:20px;font-weight:600;display:inline-block}
+.cert-pill.done{background:rgba(34,197,94,0.12);color:#86efac;border:1px solid rgba(34,197,94,0.2)}
+.cert-pill.progress{background:rgba(99,102,241,0.12);color:#a5b4fc;border:1px solid rgba(99,102,241,0.25)}
+.cert-pill.scheduled{background:rgba(234,179,8,0.1);color:#fde047;border:1px solid rgba(234,179,8,0.25)}
+.cert-pill.planned{background:rgba(255,255,255,0.05);color:var(--text3);border:1px solid var(--card-border)}
+
+/* CONTACT */
+#contact{}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;max-width:900px;margin:0 auto}
+.contact-desc{color:var(--text2);font-size:0.93rem;line-height:1.8;margin-bottom:1.5rem}
+.contact-links{display:flex;flex-direction:column;gap:0.7rem}
+.c-link{display:flex;align-items:center;gap:0.9rem;padding:0.9rem 1.1rem;background:var(--card);border:1px solid var(--card-border);border-radius:10px;text-decoration:none;color:var(--text);transition:all 0.2s}
+.c-link:hover{border-color:rgba(99,102,241,0.3);background:var(--card-hover);transform:translateX(4px)}
+.c-link-icon{font-size:1.1rem}
+.c-link-label{font-size:0.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;font-weight:600}
+.c-link-val{font-size:0.88rem;color:var(--text)}
+.avail-box{background:var(--card);border:1px solid rgba(34,197,94,0.2);border-radius:16px;padding:1.8rem}
+.avail-title{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:1.2rem;display:flex;align-items:center;gap:0.6rem}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite;flex-shrink:0}
+.avail-row{margin-bottom:1rem}
+.avail-key{font-size:0.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:0.35rem}
+.avail-pills{display:flex;flex-wrap:wrap;gap:0.35rem}
+.avail-pill{font-size:0.7rem;padding:0.2rem 0.65rem;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);color:#86efac;border-radius:6px;font-weight:500}
+.avail-val{font-size:0.88rem;color:var(--text)}
+
+/* FOOTER */
+footer{padding:2rem;text-align:center;border-top:1px solid var(--card-border);background:var(--bg2)}
+.footer-text{font-size:0.78rem;color:var(--text3)}
+.footer-text span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600}
+
+/* FADE IN */
+.fade{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade.in{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:1rem 1.2rem}
+  .nav-links{display:none}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(0,0,0,0.97);border-bottom:1px solid var(--card-border);padding:1rem 1.2rem;gap:0.8rem}
+  .nav-toggle{display:block}
+  section{padding:3.5rem 1.2rem}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
+  .hero-stats{gap:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-brand">☁ Abhijeet Deshpande</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#projects">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-glow"></div>
+  <div class="hero-bg-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="hero-badge-dot"></span> Available for EU / Germany Relocation</div>
+    <h1 class="hero-name">
+      <span class="grad">Platform & DevOps</span><br>Engineer
+    </h1>
+    <p class="hero-title"><b>10+ Years Enterprise Experience</b> · AWS · Docker · Kubernetes · Ansible · Terraform · Grafana</p>
+    <p class="hero-desc">Building resilient infrastructure, automating everything that moves, and shipping platforms that scale. Targeting DevOps and Platform Engineering roles in Germany, Netherlands, and the EU.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-grad">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+      <a href="https://linkedin.com/in/abhijeetd04" target="_blank" class="btn-outline">LinkedIn ↗</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-n">10+</div><div class="stat-l">Years Experience</div></div>
+      <div class="stat"><div class="stat-n">30K+</div><div class="stat-l">Servers Managed</div></div>
+      <div class="stat"><div class="stat-n">3+</div><div class="stat-l">Certifications</div></div>
+      <div class="stat"><div class="stat-n">EU</div><div class="stat-l">Target Market</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-top fade">
+      <div class="section-eyebrow">About Me</div>
+      <h2 class="section-title">DevOps Engineer · Platform Engineer</h2>
+      <p class="section-sub">10+ years of enterprise DevOps from patching pipelines to cloud-native platforms</p>
+    </div>
+    <div class="about-grid fade">
+      <div class="about-text">
+        <p>Platform & DevOps Engineer with <b>10+ years of enterprise experience</b> in infrastructure automation, compliance pipelines, observability, and cloud operations at scale.</p>
+        <p>I have worked extensively with <b>BMC TSSA and BMC TSO</b> building zero-touch patching workflows and compliance automation across hundreds of servers. That operational depth is now paired with modern cloud-native skills in AWS, Kubernetes, and Terraform.</p>
+        <p>Currently targeting <b>DevOps / Platform Engineering roles in Germany, Netherlands, and the wider EU</b> bringing production-grade thinking to cloud-native environments and modern platform teams.</p>
+      </div>
+      <div class="about-cards">
+        <div class="about-card"><div class="about-card-icon">📍</div><div><div class="about-card-key">Location</div><div class="about-card-val">India → Open to Germany, Netherlands, EU, UK</div></div></div>
+        <div class="about-card"><div class="about-card-icon">⏱️</div><div><div class="about-card-key">Notice Period</div><div class="about-card-val">90 Days</div></div></div>
+        <div class="about-card"><div class="about-card-icon">🛂</div><div><div class="about-card-key">Visa</div><div class="about-card-val">Requires Sponsorship · EU Blue Card Eligible</div></div></div>
+        <div class="about-card"><div class="about-card-icon">🐙</div><div><div class="about-card-key">GitHub</div><div class="about-card-val"><a href="https://github.com/abhijeet-deshpande" target="_blank">github.com/abhijeet-deshpande</a></div></div></div>
+        <div class="about-card"><div class="about-card-icon">💼</div><div><div class="about-card-key">LinkedIn</div><div class="about-card-val"><a href="https://linkedin.com/in/abhijeetd04" target="_blank">linkedin.com/in/abhijeetd04</a></div></div></div>
+        <div class="about-card"><div class="about-card-icon">📧</div><div><div class="about-card-key">Email</div><div class="about-card-val"><a href="mailto:connect.abhijeet01@gmail.com">connect.abhijeet01@gmail.com</a></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-top fade">
+      <div class="section-eyebrow">Skills & Expertise</div>
+      <h2 class="section-title">Building Reliable Cloud Infrastructure</h2>
+      <p class="section-sub">10+ years spanning enterprise automation, cloud infrastructure, and modern DevOps tooling</p>
+    </div>
+    <div class="skills-wrap fade">
+      <div>
+        <div class="skill-group-label">☁️ Cloud & Infrastructure</div>
+        <div class="skill-badges">
+          <span class="skill-badge hot">AWS EC2</span><span class="skill-badge hot">AWS EKS</span><span class="skill-badge hot">AWS S3</span><span class="skill-badge hot">AWS VPC</span><span class="skill-badge hot">AWS IAM</span><span class="skill-badge hot">AWS Lambda</span><span class="skill-badge hot">CloudWatch</span><span class="skill-badge hot">AWS RDS</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label">📦 Containers & Orchestration</div>
+        <div class="skill-badges">
+          <span class="skill-badge hot">Kubernetes</span><span class="skill-badge hot">Docker</span><span class="skill-badge hot">Helm</span><span class="skill-badge hot">Docker Compose</span><span class="skill-badge hot">EKS</span><span class="skill-badge hot">Container Registry</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label">🏗️ Infrastructure as Code</div>
+        <div class="skill-badges">
+          <span class="skill-badge hot">Terraform</span><span class="skill-badge hot">Ansible</span><span class="skill-badge hot">Terraform Modules</span><span class="skill-badge hot">Remote State</span><span class="skill-badge hot">Ansible Roles</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label">🔁 CI/CD & Automation</div>
+        <div class="skill-badges">
+          <span class="skill-badge hot">GitHub Actions</span><span class="skill-badge hot">Jenkins</span><span class="skill-badge hot">GitLab CI</span><span class="skill-badge hot">BMC TSSA</span><span class="skill-badge hot">BMC TSO</span><span class="skill-badge hot">Automated Patching</span><span class="skill-badge hot">Compliance Automation</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-label">📊 Observability</div>
+        <div class="skill-badges">
+          <span class="skill-badge hot">Grafana</span><span class="skill-badge hot">Prometheus</span><span class=""skill-badge hot">CloudWatch</span>
+      </div>
+      <div>
+        <div class="skill-group-label">🐧 OS & Scripting</div>
+        <div class="skill-badges">
+          <span class="skill-badge hot">Linux (RHEL/CentOS/Ubuntu)</span><span class="skill-badge hot">Bash / Shell</span><span class="skill-badge hot">Python</span><span class="skill-badge hot">Git</span><span class="skill-badge hot">YAML</span><span class="skill-badge hot">ServiceNow</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY / TIMELINE -->
+<section id="journey">
+  <div class="container">
+    <div class="section-top fade">
+      <div class="section-eyebrow">My Journey</div>
+      <h2 class="section-title">From Operations to Platform Engineering</h2>
+      <p class="section-sub">10+ years of building, automating, and operating enterprise infrastructure</p>
+    </div>
+    <div class="tl-tabs">
+      <button class="tl-tab active" onclick="filterTl('all',this)">All</button>
+      <button class="tl-tab" onclick="filterTl('work',this)">Work</button>
+      <button class="tl-tab" onclick="filterTl('cert',this)">Certifications</button>
+    </div>
+    <div class="timeline fade">
+
+      <div class="tl-item" data-type="work">
+        <div class="tl-period">Nov 2022 — Present</div>
+        <div class="tl-role">Senior Platform Engineer</div>
+        <div class="tl-company">Atos Global IT Services Pvt Ltd</div>
+        <ul class="tl-points">
+          <li>Built a full-stack observability platform from scratch where Python scripts pull adapter and grid health data via REST API, load into MSSQL, and surface via Grafana dashboards consumed by 4 cross-functional teams including IT leadership enabling proactive detection of platform degradation before user impact.</li>
+          <li>Containerized Grafana and BMC RSSO using Docker on Linux managed two major version upgrades (v8.1 → v11.4 → v12.3 → v13) with zero downtime configured LDAP authentication and RBAC production-grade container lifecycle management.</li>
+          <li>Engineered and maintained GitHub Actions CI/CD pipelines with self-hosted GitLab Runner on Linux, automating deployment validation workflows and integrating Ansible playbooks for post-provisioning configuration improving release quality and eliminating manual steps.</li>
+          <li>Developed Python and PowerShell scripts for REST API integrations (vRA, BMC TSO), XPATH/XSLT data transformations, and cross-system automation solid API-layer automation background directly applicable to LLM gateway integrations</li>
+          <li>Engineered 50+ BMC TrueSight Orchestration workflows automating VM provisioning (VMware vRA REST API) and incident management eliminating manual provisioning overhead and accelerating operational workflows across 4 teams.</li>
+          <li>Owned DR failover operations across VMware vCenter sites coordinated site failover, validated HAProxy routing post-failover, and verified full-service restoration through automated pipeline execution updated DR runbooks post-exercise.</li>
+          <li>Migrated 5 GitLab repositories to GitHub preserving full commit history established GitHub Wiki documentation standards for workflows, processes, and architecture improving cross-team knowledge continuity.</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">Grafana</span><span class="tl-tag">Ansible</span><span class="tl-tag">Docker</span><span class="tl-tag">Linux</span><span class="tl-tag">Python</span><span class="tl-tag">CI/CD</span></div>
+      </div>
+
+      <div class="tl-item" data-type="work">
+        <div class="tl-period">Apr 2021 — Nov 2022</div>
+        <div class="tl-role">Plaform Systems Admin</div>
+        <div class="tl-company">BMC Software</div>
+        <ul class="tl-points">
+          <li>Platform turnaround - inherited a critically degraded production environment (2% patch compliance) and systematically rebuilt operations end-to-end patching 3,300+ servers within 6 months and achieving 95% compliance across a 4,500-server estate, eliminating significant organisational security exposure.</li>
+          <li>Designed and built Health, Ops, and Value dashboards from scratch using BMC Smart Reporting providing IT leadership and operations teams real-time visibility into compliance posture and platform KPIs for the first time.</li>
+          <li>Orchestrated a phased CrowdStrike EDR rollout across 2,500 Linux servers, coordinating deployment scheduling, compatibility validation, and post-deployment health verification full endpoint security coverage with zero rollback incidents.</li>
+          <li>Most senior technical resource on the team, provided escalation support to management and peer guidance on platform automation and compliance improvements.</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">Docker</span><span class="tl-tag">Bash</span><span class="tl-tag">Linux</span><span class="tl-tag">CI/CD</span></div>
+      </div>
+
+      <div class="tl-item" data-type="work">
+        <div class="tl-period">Mar 2016 - Apr 2021</div>
+        <div class="tl-role">Senior Engineer</div>
+        <div class="tl-company">Vyom Labs Pvt Ltd</div>
+        <ul class="tl-points">
+          <li>Designed a fully automated patch management pipeline integrating ServiceNow, Ayehu Orchestrator, and BMC TSSA automated server group creation, pre-patch readiness checks, job execution, and real-time HTML status email reporting every 15 minutes.</li>
+          <li>Led end-to-end design, architecture, and delivery of BMC TSSA for a major Philippine banking client (1,700 servers, 6-month onsite engagement) delivered on schedule, awarded Best Employee for the project.</li>
+          <li>Built a custom CIS Benchmark compliance framework for MSSQL Server 2012–2016, translated 300+ benchmark rules into automated templates with remediation packages for a Singapore banking client.</li>
+          <li>Managed ~5,000 servers across 6 monthly patch cycles for banking, financial services, and telecom clients across the Philippines and Singapore — overseeing patching, compliance, and RBAC governance.</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">Linux</span><span class="tl-tag">Monitoring</span><span class="tl-tag">Bash</span></div>
+      </div>
+
+      <div class="tl-item" data-type="cert">
+        <div class="tl-period">In Progress — 2026</div>
+        <div class="tl-role">AWS Solutions Architect Associate (SAA-C03)</div>
+        <div class="tl-company">Amazon Web Services</div>
+        <ul class="tl-points">
+          <li>Covering EC2, VPC, S3, IAM, EKS, Lambda, CloudWatch, and cloud architecture best practices</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">AWS</span><span class="tl-tag">Cloud</span><span class="tl-tag">Architecture</span></div>
+      </div>
+
+      <div class="tl-item" data-type="cert">
+        <div class="tl-period">In Progress — 2026</div>
+        <div class="tl-role">Hashicorp Certified: Terraform Associate (004)</div>
+        <div class="tl-company">HashiCorp</div>
+        <ul class="tl-points">
+          <li>Covering HCL syntax, providers, state management, modules, workspaces, and remote backends with hands-on AWS provisioning labs.</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">Kubernetes</span><span class="tl-tag">CNCF</span><span class="tl-tag">Cloud Native</span></div>
+      </div>
+
+      <div class="tl-item" data-type="cert">
+        <div class="tl-period">Scheduled — 2026</div>
+        <div class="tl-role">Kubernetes Cloud Native Associate</div>
+        <div class="tl-company">CNCF</div>
+        <ul class="tl-points">
+          <li>Continuing cloud-native certication roadmap aligned with EU/Germany market requirements</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">CKA</span><span class="tl-tag">KCNA</span><span class="tl-tag">AWS</span></div>
+      </div>
+
+      <div class="tl-item" data-type="cert">
+        <div class="tl-period">Planned — 2025/2026</div>
+        <div class="tl-role">CKA · CKAD · AWS Developer Associate</div>
+        <div class="tl-company">CNCF / AWS</div>
+        <ul class="tl-points">
+          <li>Continuing cloud-native and AWS certification roadmap aligned with EU/Germany market requirements</li>
+        </ul>
+        <div class="tl-tags"><span class="tl-tag">CKA</span><span class="tl-tag">KCNA</span><span class="tl-tag">AWS</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-top fade">
+      <div class="section-eyebrow">Featured Projects</div>
+      <h2 class="section-title">End-to-end DevOps & Cloud Automation</h2>
+      <p class="section-sub">Hands-on projects demonstrating production-grade DevOps and cloud skills</p>
+    </div>
+    <div class="projects-grid fade">
+
+      <div class="proj-card">
+        <div class="proj-icon">🏗️</div>
+        <div class="proj-title">AWS Infrastructure Automation</div>
+        <div class="proj-desc">Multi-environment AWS setup (dev/staging/prod) using Terraform and Ansible. EKS cluster provisioning, VPC with security groups, S3 remote state backend, and full GitHub Actions CI/CD pipeline.</div>
+        <div class="proj-tags"><span class="proj-tag">Terraform</span><span class="proj-tag">Ansible</span><span class="proj-tag">AWS</span><span class="proj-tag">EKS</span><span class="proj-tag">GitHub Actions</span></div>
+        <div class="proj-links"><a href="https://github.com/YOUR_GITHUB_USERNAME/aws-infra-automation" target="_blank" class="proj-link">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">🛡️</div>
+        <div class="proj-title">Compliance & Patching Automation</div>
+        <div class="proj-desc">Automated Linux server patching and compliance drift detection using Ansible and Python. Grafana dashboard for real-time patch status visibility — mirrors enterprise BMC TSSA workflows in open-source tooling.</div>
+        <div class="proj-tags"><span class="proj-tag">Ansible</span><span class="proj-tag">Python</span><span class="proj-tag">Grafana</span><span class="proj-tag">Linux</span></div>
+        <div class="proj-links"><a href="https://github.com/YOUR_GITHUB_USERNAME/compliance-patching-automation" target="_blank" class="proj-link">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">📚</div>
+        <div class="proj-title">DevOps Labs</div>
+        <div class="proj-desc">Documented hands-on lab tasks from the KodeKloud Engineer platform covering Linux, Docker, Kubernetes, Terraform, and AWS. Each task includes problem statement, solution, learnings, and verified output.</div>
+        <div class="proj-tags"><span class="proj-tag">Linux</span><span class="proj-tag">Docker</span><span class="proj-tag">Kubernetes</span><span class="proj-tag">Terraform</span><span class="proj-tag">AWS</span></div>
+        <div class="proj-links"><a href="https://github.com/abhijeet-deshpande/devops-labs" target="_blank" class="proj-link">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">📊</div>
+        <div class="proj-title">Grafana Observability Stack</div>
+        <div class="proj-desc">Full observability stack via Docker Compose — Prometheus, Grafana, AlertManager, Node Exporter, and Loki. Pre-built dashboards for infrastructure health, alert routing, and log aggregation.</div>
+        <div class="proj-tags"><span class="proj-tag">Grafana</span><span class="proj-tag">Prometheus</span><span class="proj-tag">Docker</span><span class="proj-tag">Loki</span></div>
+        <div class="proj-links"><a href="https://github.com/YOUR_GITHUB_USERNAME/observability-stack" target="_blank" class="proj-link">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">🏅</div>
+        <div class="proj-title">Terraform Associate Study Repo</div>
+        <div class="proj-desc">End-to-end Terraform Associate (004) exam prep — from HCL syntax and provider configuration to remote state, modules, and workspace management. Built with real AWS infrastructure examples and CLI practice.</div>
+        <div class="proj-tags"><span class="proj-tag">Terraform</span><span class="proj-tag">AWS</span><span class="proj-tag">HCL</span><span class="proj-tag">IaC</span></div>
+        <div class="proj-links"><a href="https://github.com/YOUR_GITHUB_USERNAME/terraform-associate-prep" target="_blank" class="proj-link">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">🤖</div>
+        <div class="proj-title">100 Days of DevOps</div>
+        <div class="proj-desc">Daily DevOps challenges covering the full lifecycle — scripting, CI/CD, monitoring, IaC, and cloud. Each day documented with problem, solution, and key learning. Structured for consistency over motivation.</div>
+        <div class="proj-tags"><span class="proj-tag">DevOps</span><span class="proj-tag">AWS</span><span class="proj-tag">Kubernetes</span><span class="proj-tag">Python</span><span class="proj-tag">Bash</span></div>
+        <div class="proj-links"><a href="https://github.com/YOUR_GITHUB_USERNAME/100-days-devops" target="_blank" class="proj-link">↗ GitHub</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-top fade">
+      <div class="section-eyebrow">Certifications</div>
+      <h2 class="section-title">Credentials & Learning Path</h2>
+      <p class="section-sub">Active certification roadmap aligned with EU/Germany DevOps market requirements</p>
+    </div>
+    <div class="certs-grid fade">
+      <div class="cert-card"><div class="cert-icon">☁️</div><div><div class="cert-name">AWS Solutions Architect Associate</div><div class="cert-issuer">Amazon Web Services</div><span class="cert-pill progress">🔄 In Progress</span></div></div>
+      <div class="cert-card"><div class="cert-icon">🛠️</div><div><div class="cert-name">HashiCorp Certified: Terraform Associate (004)</div><div class="cert-issuer">HashiCorp</div><span class="cert-pill progress">📅 In Progress</span></div></div>
+      <div class="cert-card"><div class="cert-icon">☸️</div><div><div class="cert-name">Certified Kubernetes Administrator (CKA)</div><div class="cert-issuer">CNCF / Linux Foundation</div><span class="cert-pill planned">📅 Planned</span></div></div>
+      <div class="cert-card"><div class="cert-icon">☸️</div><div><div class="cert-name">Certified Kubernetes App Developer (CKAD)</div><div class="cert-issuer">CNCF / Linux Foundation</div><span class="cert-pill planned">📅 Planned</span></div></div>
+      <div class="cert-card"><div class="cert-icon">🌐</div><div><div class="cert-name">Kubernetes & Cloud Native Associate (KCNA)</div><div class="cert-issuer">CNCF / Linux Foundation</div><span class="cert-pill scheduled">📅 Scheduled</span></div></div>
+      <div class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">AWS Certified Cloud Practitioner</div><div class="cert-issuer">ISSUER — AWS</div><span class="cert-pill done">✅ Certified</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-top fade">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="section-title">Let's Build Something Useful</h2>
+      <p class="section-sub">Cloud Infrastructure, Automation, and DevOps Solutions</p>
+    </div>
+    <div class="contact-grid fade">
+      <div>
+        <p class="contact-desc">Open to <b>DevOps Engineer, Platform Engineer, SRE, and Cloud Engineer</b> roles in Germany, Netherlands, Austria, Switzerland, UK, and EU Remote. If you're hiring or know someone who is — reach out.</p>
+        <div class="contact-links">
+          <a href="mailto:connect.abhijeet01@gmail.com" class="c-link"><div class="c-link-icon">📧</div><div><div class="c-link-label">Email</div><div class="c-link-val">connect.abhijeet01@gmail.com</div></div></a>
+          <a href="https://linkedin.com/in/abhijeetd04" target="_blank" class="c-link"><div class="c-link-icon">💼</div><div><div class="c-link-label">LinkedIn</div><div class="c-link-val">linkedin.com/in/abhijeetd04</div></div></a>
+          <a href="https://github.com/abhijeet-deshpande" target="_blank" class="c-link"><div class="c-link-icon">🐙</div><div><div class="c-link-label">GitHub</div><div class="c-link-val">github.com/abhijeet-deshpande</div></div></a>
+        </div>
+      </div>
+      <div class="avail-box">
+        <div class="avail-title"><div class="avail-dot"></div> Open to Opportunities</div>
+        <div class="avail-row"><div class="avail-key">Target Roles</div><div class="avail-pills"><span class="avail-pill">DevOps Engineer</span><span class="avail-pill">Platform Engineer</span><span class="avail-pill">SRE</span><span class="avail-pill">Cloud Engineer</span></div></div>
+        <div class="avail-row"><div class="avail-key">Locations</div><div class="avail-pills"><span class="avail-pill">🇩🇪 Germany</span><span class="avail-pill">🇳🇱 Netherlands</span><span class="avail-pill">🇦🇹 Austria</span><span class="avail-pill">🇨🇭 Switzerland</span><span class="avail-pill">🇬🇧 UK</span><span class="avail-pill">🌐 EU Remote</span></div></div>
+        <div class="avail-row"><div class="avail-key">Notice Period</div><div class="avail-val">90 Days</div></div>
+        <div class="avail-row"><div class="avail-key">Visa</div><div class="avail-val">Requires Sponsorship · EU Blue Card Eligible</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-text">© 2026 <span>Abhijeet Deshpande</span> · Platform & DevOps Engineer · India → <span>EU / Germany</span></p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('in') }), {threshold:0.1});
+document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+function filterTl(type, btn) {
+  document.querySelectorAll('.tl-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tl-item').forEach(item => {
+    if(type === 'all' || item.dataset.type === type) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+const secs = document.querySelectorAll('section[id]');
+const nls = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if(window.scrollY >= s.offsetTop - 120) cur = s.id });
+  nls.forEach(a => { a.style.color = a.getAttribute('href') === '#'+cur ? '#fff' : '' });
+});
+</script>
+</body>
+</html>
