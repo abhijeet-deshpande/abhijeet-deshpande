@@ -13,15 +13,21 @@
 
 ## 👨‍💻 About Me
 
-Platform & DevOps Engineer with **10+ years of enterprise experience** in infrastructure automation, compliance, observability, and cloud operations. I have worked extensively on large-scale environments involving BMC TSSA, BMC TSO, automated patching, CI/CD pipelines, and Grafana-based monitoring across hybrid infrastructure.
+## 👨‍💻 About Me
 
-Currently upskilling in **AWS, Kubernetes, Terraform, and Python** to move into cloud-native platform engineering roles in the **EU / Germany** market.
+Platform & DevOps Engineer with **10+ years of enterprise experience** building and operating large-scale infrastructure. Currently a **Senior Platform Engineer at Atos**, managing a fleet of **30,000+ servers**, supporting **5 cross-functional teams**, and driving automation across
+patching, compliance, and incident management workflows.
+
+My work spans CI/CD pipelines, full-stack observability using Grafana and Prometheus, configuration management with Ansible, and scripting in Python and Bash to eliminate toil at scale.
+
+Now deepening expertise in **AWS, Kubernetes, and Terraform** — targeting **DevOps / Platform Engineering roles in Germany, Netherlands, and the wider EU**.
 
 - 🔭 Currently building: Cloud & Kubernetes portfolio projects
-- 🌱 Currently learning: AWS (SAA-C03), CKA, Terraform advanced patterns
+- 🌱 Currently studying: AWS SAA-C03, CKA, Terraform Associate
 - 🎯 Target roles: DevOps Engineer · Platform Engineer · SRE · Cloud Engineer
-- 📍 Location: India → Targeting Germany / EU relocation
-- 💬 Ask me about: Enterprise automation, patching pipelines, Grafana dashboards, BMC tooling, CI/CD, Kubernetes, Docker, Terraform
+- 📍 Location: India → Open to Germany / EU relocation
+- ⏱️ Notice period: 90 days · EU Blue Card eligible
+- 💬 Ask me about: Enterprise automation, Grafana, CI/CD, Kubernetes, Terraform, Python
 
 ---
 
