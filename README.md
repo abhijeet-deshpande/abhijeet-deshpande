@@ -1,5 +1,3 @@
-<div align="left">
-
 # Hi, I'm Abhijeet Deshpande 👋
 
 ### Platform & DevOps Engineer | 10+ Years of Enterprise Experience
@@ -8,9 +6,7 @@
 
 🌍 Based in India · Open to DevOps / Platform Engineering roles in **Germany, Netherlands, Austria, UK & EU**
 
-</div>
-
-🌐 Web: [Click Here](https://username.github.io/username)
+🌐 Web: [Click Me](https://abhijeet-deshpande.github.io/abhijeet-deshpande/) :shipit: | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhijeetd04) | [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:connect.abhijeet01@gmail.com) | [![GitHub](https://img.shields.io/badge/GitHub-000000?style=flat&logo=github&logoColor=white)](https://abhijeet-deshpande.github.io/abhijeet-deshpande) | [![Profile Views](https://komarev.com/ghpvc/?username=abhijeet-deshpande&label=Profile+Views&color=0077B5&style=flat)](https://github.com/abhijeet-deshpande)
 
 
 ---
