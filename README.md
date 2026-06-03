@@ -8,7 +8,7 @@
 
 🌍 Based in India · Open to DevOps / Platform Engineering roles in **Germany, Netherlands, Austria, UK & EU**
 
-🌐 Web: [Click Me](https://abhijeet-deshpande.github.io/abhijeet-deshpande/) :shipit:
+🌐 Web: [![Click Here]](https://abhijeet-deshpande.github.io) :shipit:
 </div>
 
 ---
