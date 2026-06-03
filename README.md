@@ -13,8 +13,6 @@
 
 ## 👨‍💻 About Me
 
-## 👨‍💻 About Me
-
 Platform & DevOps Engineer with **10+ years of enterprise experience** building and operating large-scale infrastructure. Currently a **Senior Platform Engineer at Atos**, managing a fleet of **30,000+ servers**, supporting **5 cross-functional teams**, and driving automation across
 patching, compliance, and incident management workflows.
 
