@@ -8,8 +8,10 @@
 
 🌍 Based in India · Open to DevOps / Platform Engineering roles in **Germany, Netherlands, Austria, UK & EU**
 
-🌐 Web: [Click Here](https://username.github.io/username)
 </div>
+
+🌐 Web: [Click Here](https://username.github.io/username)
+
 
 ---
 
