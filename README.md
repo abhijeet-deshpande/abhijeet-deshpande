@@ -24,7 +24,7 @@ Currently upskilling in **AWS, Kubernetes, Terraform, and Python** to move into 
 - 🌱 Currently learning: AWS (SAA-C03), CKA, Terraform advanced patterns
 - 🎯 Target roles: DevOps Engineer · Platform Engineer · SRE · Cloud Engineer
 - 📍 Location: India → Targeting Germany / EU relocation
-- 💬 Ask me about: Enterprise automation, patching pipelines, Grafana dashboards, BMC tooling, CI/CD
+- 💬 Ask me about: Enterprise automation, patching pipelines, Grafana dashboards, BMC tooling, CI/CD, Kubernetes, Docker, Terraform
 
 ---
 
@@ -35,7 +35,7 @@ Currently upskilling in **AWS, Kubernetes, Terraform, and Python** to move into 
 
 | Category | Tools & Technologies |
 |---|---|
-| ☁️ Cloud | AWS (EC2, S3, VPC, IAM, EKS, Lambda, CloudWatch) |
+| ☁️ Cloud | AWS (EC2, S3, VPC, IAM, EKS, Lambda, CloudWatch,Route53, ALB) |
 | 📦 Containers & Orchestration | Docker, Kubernetes, Helm, EKS |
 | 🏗️ Infrastructure as Code | Terraform, Ansible |
 | 🔁 CI/CD | GitHub Actions, GitLab CI, YAML Pipelines |
@@ -54,9 +54,9 @@ Currently upskilling in **AWS, Kubernetes, Terraform, and Python** to move into 
 | AWS Solutions Architect Associate (SAA-C03) | AWS | 🔄 In Progress | — |
 | AWS Developer Associate | AWS | 🔄 Planned | — |
 | Certified Kubernetes Administrator (CKA) | CNCF | 🔄 Planned | — |
-| Certified Kubernetes Application Developer (CKAD) | CNCF | 🔄 Planned | — |
+| HashiCorp Certified: Terraform Associate (004) | Hashicorp | 🔄 Planned | — |
 | KCNA | CNCF | 🔄 Planned | — |
-| AWS Certified Cloud Practitioner | ISSUER | ✅ Certified |  |
+| AWS Certified Cloud Practitioner | ISSUER | ✅ Certified |  [View Certifictaion](https://www.credly.com/badges/8564b8be-3b96-4e3e-b60c-c9ad688558ee/linked_in_profile)|
 
 ---
 
@@ -76,7 +76,7 @@ Currently upskilling in **AWS, Kubernetes, Terraform, and Python** to move into 
 
 ---
 
-### 📚 [KodeKloud DevOps Labs](https://github.com/YOUR_GITHUB_USERNAME/kodekloud-devops-labs)
+### 📚 [DevOps Labs](https://github.com/YOUR_GITHUB_USERNAME/devops-labs)
 > Hands-on DevOps lab tasks completed on the KodeKloud Engineer platform — Linux, Docker, Kubernetes, Terraform, and AWS. Each task documented with problem statement, commands, and proof of completion.
 
 `Linux` `Docker` `Kubernetes` `Terraform` `AWS`
@@ -87,14 +87,14 @@ Currently upskilling in **AWS, Kubernetes, Terraform, and Python** to move into 
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=dark&hide_border=true&count_private=true" height="165"/>
-<img src="https://github-readme-streak-stats.herokuapp.com?user=YOUR_GITHUB_USERNAME&theme=dark&hide_border=true" height="165"/>
+<img src="https://github-readme-stats.vercel.app/api?username=abhijeet-deshpande&show_icons=true&theme=dark&hide_border=true&count_private=true" height="165"/>
+<img src="https://github-readme-streak-stats.herokuapp.com?user=abhijeet-deshpande&theme=dark&hide_border=true" height="165"/>
 
 </div>
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=dark&hide_border=true&langs_count=8"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abhijeet-deshpande&layout=compact&theme=dark&hide_border=true&langs_count=8"/>
 
 </div>
 
@@ -106,11 +106,11 @@ I am actively seeking roles in:
 
 | | |
 |---|---|
-| 🎯 **Roles** | DevOps Engineer, Platform Engineer, SRE, Cloud Engineer, Infrastructure Engineer |
+| 🎯 **Roles** | DevOps Engineer, Platform Engineer, SRE, Cloud Engineer, Infrastructure Engineer, Lead DevOps Engineer, Senior Site Reliability Engineer|
 | 🌍 **Locations** | Germany 🇩🇪 · Netherlands 🇳🇱 · Austria 🇦🇹 · Switzerland 🇨🇭 · UK 🇬🇧 · EU Remote 🌐 |
 | ⏱️ **Notice Period** | 90 days |
 | 🛂 **Visa** | Require sponsorship · Eligible for EU Blue Card |
-| 📬 **Contact** | YOUR_EMAIL_ADDRESS |
+| 📬 **Contact** | connect.abhijeet01@gmail.com |
 
 ---
 
@@ -118,9 +118,9 @@ I am actively seeking roles in:
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN_PROFILE)
-[![Email](https://img.shields.io/badge/Email-Reach%20Out-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR_EMAIL_ADDRESS)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_GITHUB_USERNAME)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhijeetd04)
+[![Email](https://img.shields.io/badge/Email-Reach%20Out-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:connect.abhijeet01@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abhijeet-deshpande)
 
 </div>
 
